@@ -16,7 +16,7 @@ jobs:
       - run: echo "The ${{ github.repository }} repository has been cloned to the runner."
       - run: echo "The workflow is now ready to test your code on the runner."
       - name: ${{ matrix.os }}
-        if: ${{ name == "macos-latest" }}
+        if: ${{ name == 'macos-latest' }}
           - run: echo "Running on Mac."
       - run: |
           ls ${{ github.workspace }}
