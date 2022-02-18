@@ -18,5 +18,5 @@ jobs:
       - name: ${{ matrix.os }}
         run: |
           ls ${{ github.workspace }}
-      - run: echo "This job's status is ${{ job.status } running on ${{ matrix.os}}."
+      - run: echo "This job's status is ${{ job.status }} running on ${{ matrix.os}}."
 
