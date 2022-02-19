@@ -17,7 +17,8 @@ jobs:
       - run: echo "The workflow is now ready to test your code on the runner."
       - name: ${{ matrix.os }}
         if: ${{ name == 'macos-latest' }}
-          - run: echo "Running on Mac."
+          run: |
+            echo "Running on Mac."
       - run: |
           ls ${{ github.workspace }}
       - run: echo "This job's status is ${{ job.status }} running on ${{ matrix.os}}."
