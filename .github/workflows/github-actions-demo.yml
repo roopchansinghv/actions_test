@@ -38,3 +38,5 @@ jobs:
   Explore-GitHub-Actions-on-Mac:
     runs-on: macos-latest
     needs: Common-Jobs
+    steps:
+      - run: uname -a
