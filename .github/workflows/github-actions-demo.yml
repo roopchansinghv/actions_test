@@ -23,15 +23,16 @@ jobs:
           ls ${{ github.workspace }}
       - run: echo "This job's status is ${{ job.status }}."
       # - run: uname -a
+    needs: [Explore-GitHub-Actions-on-Linux, Explore-GitHub-Actions-on-Mac]
 
   Explore-GitHub-Actions-on-Mac:
     runs-on: macos-latest
-    needs: Common-Jobs
+    # needs: Common-Jobs
     steps:
       - run: uname -a
 
   Explore-GitHub-Actions-on-Linux:
     runs-on: ubuntu-latest
-    needs: Common-Jobs
+    # needs: Common-Jobs
     steps:
       - run: uname -a
